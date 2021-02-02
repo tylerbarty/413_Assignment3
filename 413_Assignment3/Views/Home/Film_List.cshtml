@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Film List";
+}
+
+@model IEnumerable<_413_Assignment3.Models.ApplicationResponse>
+
+<h1>@ViewData["Title"]</h1>
+
+
+<div>
+    <h2>Films in the List</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Rating</th>
+                <th>Edited</th>
+                <th>Lent To</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (_413_Assignment3.Models.ApplicationResponse x in Model)
+            {
+                <tr>
+                    <td>@x.Category</td>
+                    <td>@x.Title</td>
+                    <td>@x.Year</td>
+                    <td>@x.Rating</td>
+                    <td>@x.Edited</td>
+                    <td>@x.Lent_to</td>
+                    <td>@x.Notes</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</div>

@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Thank you for Your Submission";
+}
+
+@model _413_Assignment3.Models.ApplicationResponse
+
+<h1>@ViewBag.Title</h1>
+
+
+@if (Model.Title == "Independence Day")
+{
+    @:Independence Day is not as american as Rocky IV, so we are unable to put it in your list.
+
+}
+<div>
+    Click <a asp-action="Film_List">Here</a> to see the rest of the films
+</div>
